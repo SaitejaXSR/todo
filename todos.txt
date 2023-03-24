@@ -1,2 +1,5 @@
-task1
-task4
+DBRefresh
+KR$NA Concert
+Go to gym
+Learn Python
+Buy groceries
