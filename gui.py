@@ -14,7 +14,6 @@ while True:
     event, values = window.read()
     print(event)
     print(values)
-    window['todo'].update(value=values['todos'][0].strip())
     match event:
         case "Add":
             todos = functions.get_todos()
@@ -30,6 +29,8 @@ while True:
             todos[index] = new_todo + "\n"
             functions.write_todos(todos)
             window['todos'].update(values=todos)
+        case 'todos':
+            window['todo'].update(value=values['todos'][0].strip())
         case gui.WIN_CLOSED:
             break
 
