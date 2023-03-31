@@ -1,7 +1,11 @@
 import functions
 import PySimpleGUI as gui
 import time
+import os
 
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
 clock = gui.Text(key="clock")
 window_font = ('Helvetica', 12)
 button_font = ('Calibri', 10)
